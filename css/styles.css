@@ -10,25 +10,33 @@ Flexbox:
 */
 
 
-
-@media (max-width: 90em) {
+@media (max-width: 600px) {
     #headshot{
         display: none;
     }
 }
-
+@media (max-width: 90em) {
+    .content {
+      flex: 1;
+    }
+  }
+@media only screen and (max-width: 500px) {
+    #spotify-player iframe {
+      width: 1000px;
+    }
+}
 
 body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
     background-color: rgb(33, 7, 39);
-    padding-left: 5em;
-    padding-right: 5em;
-    padding-top: 1em;
-    padding-bottom: 1em;
 }
 
 .site-wrapper {
     min-height: 100vh;
-    width: 100%;
+    width: 95%;
+    height: 99%;
     border-radius: 1%;
     background-image: linear-gradient(rgba(50, 10, 70, 0.7), rgba(50, 10, 70, 0.7)), url(../img/background.jpg);
     background-position: center;
@@ -44,10 +52,8 @@ body {
 
 .header h1 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: 5em;
+    font-size: clamp(2rem, 4vw, 5rem);
     font-weight: 800;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
     margin-left: 1em;
     margin-right: 1em;
     color: white;
@@ -55,8 +61,8 @@ body {
 }
 
 #headshot {
-    width: 12em;
-    height: 12em;
+    width: clamp(4em, 8em, 12em);
+    height: clamp(4em, 8em, 12em);
     border-radius: 50%;
     border: 0.5em solid purple;
     margin: 1em;
@@ -88,49 +94,46 @@ nav ul li {
 .navbar ul li a {
     font-family: 'Titillium Web', sans-serif;
     text-decoration: none;
-    font-size: 2.5rem;
+    font-size: clamp(1.5rem, 2vw, 4rem);
     font-weight: 800;
     color: white;
 }
 
-#content {
+.content {
     display: flex;
     flex-direction: row;
-    margin-top: 2.5em;
-    margin-right: 2.5em;
+    flex-wrap: wrap;
+    margin: 1em;
+    padding: 1em;
 }
 
 #info {
     font-family: 'Titillium Web', sans-serif;
     text-decoration: none;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 2vw, 4rem);
     font-weight: 800;
     color: white;
-    padding: 1em;
 }
 
-#twitter-timeline {
-    margin-top: 2.5em;
-    padding-bottom: 10em;
-    padding-right: 1em;
-}
-#spotify-player {
-    margin-top: 2.5em;
-    padding-bottom: 10em;
-    padding-right: 1em;
-}
 
-.footer {
-    margin-top: 10em;
-}
 
 #social-links {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 #social-links a {
-    display: inline-block;
     vertical-align: middle;
-    padding: 0.75em;
+    padding: clamp(0.5vw, 1vw, 1.5vw);
+}
+#social-links a svg {
+    width: clamp(25px, 75px, 125px);
+    height: clamp(25px, 75px, 125px);
+  }
+
+#spotify-player iframe {
+    width: 300px;
 }

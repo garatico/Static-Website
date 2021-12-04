@@ -22,7 +22,7 @@ Flexbox:
   }
 @media only screen and (max-width: 500px) {
     #spotify-player iframe {
-      width: 1000px;
+        width: 100px;
     }
 }
 
@@ -68,12 +68,7 @@ body {
     margin: 1em;
 }
 
-.nav-container {
-    background-image: linear-gradient(rgba(50, 10, 70, 0.8), rgba(50, 10, 70, 0.8));
-    border-radius: 5%;
-}
-
-.navbar {
+#navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -84,14 +79,14 @@ nav {
     text-align: left;
 }
 
-nav ul li {
+#navbar ul li {
     list-style: none;
     display: inline-block;
     vertical-align: middle;
     margin-left: 5vh;
 }
 
-.navbar ul li a {
+#navbar ul li a {
     font-family: 'Titillium Web', sans-serif;
     text-decoration: none;
     font-size: clamp(1.5rem, 2vw, 4rem);

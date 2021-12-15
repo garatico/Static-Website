@@ -9,20 +9,37 @@ Flexbox:
 
 */
 
-
-@media (max-width: 600px) {
+/*
+ Hides spotify player under 576px
+*/
+@media (max-width: 576px) {
+    #spotify-player iframe {
+        display: none;
+    }
+    #header {
+        margin: 1vh;
+    }
+    #header h1 {
+        font-size: 3rem;
+    }
+}
+@media (max-width: 768px) {
     #headshot{
         display: none;
     }
 }
-@media (max-width: 90em) {
-    .content {
-      flex: 1;
+@media (min-width: 576px) {
+    #header {
+        margin: 3vh;
+        align-items: center;
     }
-  }
-@media only screen and (max-width: 500px) {
-    #spotify-player iframe {
-        width: 100px;
+    #header h1 {
+        font-size: 4rem;
+    }
+    #headshot{
+       margin: 3vh;
+       width: 25vh;
+       height: 25vh;
     }
 }
 
@@ -44,28 +61,20 @@ body {
     position: relative;
 }
 
-.header {
-    min-height: 10vh;
+#header {
     display: flex;
-    overflow: auto;
 }
 
-.header h1 {
+#header h1 {
     font-family: 'Titillium Web', sans-serif;
-    font-size: clamp(2rem, 4vw, 5rem);
     font-weight: 800;
-    margin-left: 1em;
-    margin-right: 1em;
     color: white;
     text-align: center;
 }
 
 #headshot {
-    width: clamp(4em, 8em, 12em);
-    height: clamp(4em, 8em, 12em);
     border-radius: 50%;
     border: 0.5em solid purple;
-    margin: 1em;
 }
 
 #navbar {
@@ -101,6 +110,7 @@ nav {
     margin: 1em;
     padding: 1em;
 }
+
 
 #info {
     font-family: 'Titillium Web', sans-serif;

@@ -143,6 +143,10 @@ nav {
     width: 300px;
 }
 
+/* 
+    MUSIC PAGE SPECIFIC STYLING
+*/
+
 #bs_album a img{
     width: 50vh;
     height: 50vh;
@@ -151,4 +155,17 @@ nav {
 #giovanni_desc {
     font-size: clamp(3rem, 4vw, 8rem);
     font-weight: 800;
+}
+
+/*
+    PORTFOLIO / PROJECTS PAGE SPECIFIC STYLING
+*/
+#projects_list ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+#projects_list ul li {
+    list-style: none;
+    color: white;
+    font-size: clamp(1rem, 3vw, 3rem);
 }

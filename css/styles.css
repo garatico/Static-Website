@@ -142,3 +142,8 @@ nav {
 #spotify-player iframe {
     width: 300px;
 }
+
+#bs_album a img{
+    width: 50vh;
+    height: 50vh;
+}

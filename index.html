@@ -12,6 +12,7 @@
 <!-- Needed to have an HTML page -->
 <!DOCTYPE html>
 <html>
+
 <!-- Content not visible on the page -->
 
 <head>
@@ -42,20 +43,6 @@
 
     <!-- Wraps entire page in container for styling -->
     <section class="site-wrapper">
-
-        <!-- Section header containing heading and headshot -->
-        <section class="align-middle" id="header">
-            <!-- Denotes heading tags, bigger number = smaller header  -->
-            <h1> Giovanni Aratico | SanaraX </h1>
-            <!-- img = Image tag, 
-                     SRC = Where the pic is, 
-                     img-thumbnail = Bootstrap class to round pic
-                     img-fluid -->
-            <img src="./img/face.jpg" id="headshot">
-
-            <!-- Denotes list of social media links
-                SVG icons pulled from Bootstraps icons -->
-        </section>
 
         <!-- Div container containing the navbar -->
         <div class="container">
@@ -95,13 +82,35 @@
             </nav>
         </div>
 
+        <!-- Section header containing heading and headshot -->
+        <section class="align-middle" id="header">
+            <!-- Denotes heading tags, bigger number = smaller header  -->
+            <h1> Giovanni Aratico | SanaraX </h1>
+            <!-- img = Image tag, 
+                     SRC = Where the pic is, 
+                     img-thumbnail = Bootstrap class to round pic
+                     img-fluid -->
+            <img src="./img/face.jpg" id="headshot">
+
+            <!-- Denotes list of social media links
+                SVG icons pulled from Bootstraps icons -->
+        </section>
+
         <!-- Contains content of the page -->
         <div class="content">
 
             <div id="info">
-                <p id="giovanni_desc">
-                    Data Analysis. Music Composition. Gaming. 
-                </p>
+                <ul id="giovanni_desc">
+                    <li>
+                        Data Analysis.
+                    </li>
+                    <li>
+                        Music Composition.
+                    </li>
+                    <li>
+                        Gaming.
+                    </li>
+                </ul>
                 <p>
                     Here you will find links to my music and my development projects!
                 </p>

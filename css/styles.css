@@ -10,9 +10,13 @@ Flexbox:
 */
 
 /*
- Hides spotify player under 576px
+    Hides spotify player under 576px
+    Hides twitter timeline under 576px
 */
 @media (max-width: 576px) {
+    #twitter-timeline {
+        display: none;
+    }
     #spotify-player iframe {
         display: none;
     }
@@ -61,26 +65,16 @@ body {
     position: relative;
 }
 
-#header {
-    display: flex;
-}
-
-#header h1 {
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 800;
-    color: white;
-    text-align: center;
-}
-
-#headshot {
-    border-radius: 50%;
-    border: 0.5em solid purple;
-}
-
+/*  
+    NAVBAR RELATED STYLINGS
+*/
 #navbar {
     display: flex;
     flex-direction: row;
     align-items: center;
+    margin-top: 0.5em;
+    background-image: linear-gradient(rgba(50, 10, 70, 0.1), rgba(50, 10, 70, 0.2));
+    border-radius: 5%;
 }
 
 nav {
@@ -103,6 +97,28 @@ nav {
     color: white;
 }
 
+/*
+    HEADING RELATED SYLING
+*/
+#header {
+    display: flex;
+    background-image: linear-gradient(rgba(50, 10, 70, 0.3), rgba(50, 10, 70, 0.7));
+    border-radius: 2%;
+}
+#header h1 {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 800;
+    color: white;
+    text-align: center;
+    margin-left: 3vh;
+}
+#headshot {
+    border-radius: 50%;
+    border: 0.5em solid purple;
+}
+
+
+
 .content {
     display: flex;
     flex-direction: row;
@@ -110,7 +126,6 @@ nav {
     margin: 1em;
     padding: 1em;
 }
-
 
 #info {
     font-family: 'Titillium Web', sans-serif;
@@ -120,7 +135,9 @@ nav {
     color: white;
 }
 
-
+/*
+    SOCIAL LINKS STYLING
+*/
 
 #social-links {
     display: flex;
@@ -129,7 +146,6 @@ nav {
     justify-content: center;
     align-items: center;
 }
-
 #social-links a {
     vertical-align: middle;
     padding: clamp(0.5vw, 1vw, 1.5vw);
@@ -137,12 +153,21 @@ nav {
 #social-links a svg {
     width: clamp(25px, 75px, 125px);
     height: clamp(25px, 75px, 125px);
-  }
+}
 
 #spotify-player iframe {
     width: 300px;
 }
 
+/*
+    INDEX PAGE SPECIFIC STYLING
+*/
+
+#giovanni_desc li{
+    font-size: clamp(2rem, 3vw, 6rem);
+    font-weight: 800;
+    margin-left: 5vh;
+}
 /* 
     MUSIC PAGE SPECIFIC STYLING
 */
@@ -150,11 +175,6 @@ nav {
 #bs_album a img{
     width: 50vh;
     height: 50vh;
-}
-
-#giovanni_desc {
-    font-size: clamp(3rem, 4vw, 8rem);
-    font-weight: 800;
 }
 
 /*

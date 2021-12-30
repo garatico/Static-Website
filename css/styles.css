@@ -115,7 +115,9 @@ nav {
     border: 0.5em solid purple;
 }
 
-
+/*
+    CONTENT RELATED STYLINGS
+*/
 
 .content {
     display: flex;
@@ -174,9 +176,15 @@ nav {
     MUSIC PAGE SPECIFIC STYLING
 */
 
+li#album_info div p{
+    font-size: clamp(2rem, 3vw, 6rem);
+    font-weight: 500;
+    color: white;
+}
+
 #bs_album a img{
-    width: 50vh;
-    height: 50vh;
+    width: clamp(10vw, 60vw, 70vw);
+    height: clamp(10vw, 60vw, 70vw);
 }
 
 /*
@@ -185,10 +193,17 @@ nav {
 #projects_list ul {
     display: flex;
     flex-wrap: wrap;
-}
-#projects_list ul li {
     list-style: none;
+}
+#projects_list ul li#project_title {
     color: white;
+    font-size: clamp(1rem, 3vw, 5rem);
+}
+#projects_list ul li#project_desc {
+    color: white;
+    font-size: clamp(1rem, 2vw, 3rem);
+}
+#port_link a {
     font-size: clamp(1rem, 3vw, 3rem);
 }
 

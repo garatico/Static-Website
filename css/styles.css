@@ -1,15 +1,13 @@
-
 /*
-min-height = 1 / 100 of the viewport
-
-Flexbox:
-- display:flex;
-- flex-direction: row/column;
-
-
+     FILE: styles.css
+     AUTHOR: Giovanni Aratico 
+     CREATED: 11-24-2021
+     LAST UPDATED: 12-29-2021
 */
 
 /*
+    MEDIA QUERIES STYLING:
+
     Hides spotify player under 576px
     Hides twitter timeline under 576px
 */
@@ -156,7 +154,7 @@ nav {
 }
 
 #spotify-player iframe {
-    width: 300px;
+    width: 480px;
 }
 
 /*
@@ -166,7 +164,11 @@ nav {
 #giovanni_desc li{
     font-size: clamp(2rem, 3vw, 6rem);
     font-weight: 800;
+    font-style: italic;
     margin-left: 5vh;
+}
+#welcome_desc {
+    margin-right: 25vh;
 }
 /* 
     MUSIC PAGE SPECIFIC STYLING
@@ -189,3 +191,13 @@ nav {
     color: white;
     font-size: clamp(1rem, 3vw, 3rem);
 }
+
+/*
+
+min-height = 1 / 100 of the viewport
+
+Flexbox:
+- display:flex;
+- flex-direction: row/column;
+
+*/

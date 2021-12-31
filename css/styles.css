@@ -2,7 +2,7 @@
      FILE: styles.css
      AUTHOR: Giovanni Aratico 
      CREATED: 11-24-2021
-     LAST UPDATED: 12-29-2021
+     LAST UPDATED: 12-30-2021
 */
 
 /*
@@ -172,6 +172,9 @@ nav {
 #welcome_desc {
     margin-right: 25vh;
 }
+#twitter-timeline {
+    margin-right: 5vw;
+}
 /* 
     MUSIC PAGE SPECIFIC STYLING
 */
@@ -206,6 +209,13 @@ li#album_info div p{
 #port_link a {
     font-size: clamp(1rem, 3vw, 3rem);
 }
+
+
+testy-component {
+    color: white;
+}
+
+
 
 /*
 

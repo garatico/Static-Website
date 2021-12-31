@@ -2,7 +2,7 @@
      FILE: index.html
      AUTHOR: Giovanni Aratico 
      CREATED: 11-23-2021
-     LAST UPDATED: 12-29-2021
+     LAST UPDATED: 12-30-2021
 
      DESCRIPTION: Personal website to contain music stuff and computer stuff
      -->
@@ -12,6 +12,7 @@
 <html>
 
 <!-- Content not visible on the page -->
+
 <head>
     <title> Giovanni Aratico | Home </title>
     <!-- Character encoding standard -->
@@ -32,9 +33,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
+
 </head>
 
 <!-- Body denotes all visible elements of the page -->
+
 <body class="bg-dark">
 
     <!-- Wraps entire page in container for styling -->
@@ -42,40 +45,8 @@
 
         <!-- Div container containing the navbar -->
         <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
-                    aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navCollapse">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item">
-                            <!-- Returns user to home page -->
-                            <a class="nav-link" href="index.html">
-                                HOME
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Takes user to music page -->
-                            <a class="nav-link" href="./views/music.html">
-                                MUSIC
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Takes user to projects page -->
-                            <a class="nav-link" href="./views/projects.html">
-                                PROJECTS
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <!-- Takes user to about page -->
-                            <a class="nav-link" href="./views/about.html">
-                                ABOUT
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+            <giovanni-navbar>
+            </giovanni-navbar>
         </div>
 
         <!-- Section header containing heading and headshot -->
@@ -176,7 +147,7 @@
         </section>
 
     </section>
-
+    <script src="scripts/components.js"></script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
      FILE: styles.css
      AUTHOR: Giovanni Aratico 
      CREATED: 11-24-2021
-     LAST UPDATED: 12-30-2021
+     LAST UPDATED: 01-04-2022
 */
 
 /*
@@ -145,6 +145,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 25px;
 }
 #social-links a {
     vertical-align: middle;

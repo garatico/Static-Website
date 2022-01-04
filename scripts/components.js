@@ -1,3 +1,9 @@
+/*
+     FILE: components.js
+     AUTHOR: Giovanni Aratico 
+     CREATED: 12-30-2021
+     LAST UPDATED: 01-03-2022
+*/
 
 // Class allows for reusable components of the navbars on all pages
 class GiovanniNavBar extends HTMLElement {
@@ -63,4 +69,3 @@ class GiovanniNavBar extends HTMLElement {
 
 // Defines custom HTML Element
 window.customElements.define('giovanni-navbar', GiovanniNavBar);
-

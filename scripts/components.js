@@ -5,6 +5,19 @@
      LAST UPDATED: 01-03-2022
 */
 
+
+
+const projectsList = {
+    "Personal-Website": [`Personal Website`,
+        `Demonstrates basic web development skills including HTML and CSS. Utilitizes Bootstrap styling and demonstrates knowledge of git version control.`,
+        `https://github.com/garatico/garatico.github.io`],
+    "Metacritic-Scraper": [`Metacritic Webscraper`,
+        `Demonstrates basic programming skills in Python. Utilitizes the libraries Requests, NumPy and BeautifulSoup to collect data and output to usable formats.`,
+        `https://github.com/garatico/Metacritic-Scraper`]
+}
+
+
+
 // Class allows for reusable components of the navbars on all pages
 class GiovanniNavBar extends HTMLElement {
     // Constructor runs function to check page and pushes to custom component
@@ -67,5 +80,40 @@ class GiovanniNavBar extends HTMLElement {
     }
 }
 
+class GiovanniProject extends HTMLElement {
+    constructor() {
+        super();
+        let whichProject = this.projectBuilder(this.getAttribute('project'));
+        this.innerHTML = whichProject;
+    }
+    projectBuilder(project) {
+        let thisProject = project;
+        if (thisProject in projectsList) {
+            console.log(project)
+            let projectHTML =
+                `<ul id="project">  
+            <li id="project_title">
+                <strong><i> - ${projectsList[project][0]}</i></strong>
+            </li>
+            <li id="project_desc">
+                ${projectsList[project][1]}
+            </li>
+            <div id="port_link">
+                <a href="${projectsList[project][2]}">
+                    Link to Project
+                </a>
+            </div>
+        </ul>`
+            return projectHTML;
+        } else {
+            console.log("NO SUCH PROJECT")
+            return "<p></p>";
+        }
+
+    }
+}
+
 // Defines custom HTML Element
 window.customElements.define('giovanni-navbar', GiovanniNavBar);
+window.customElements.define('giovanni-project', GiovanniProject);
+

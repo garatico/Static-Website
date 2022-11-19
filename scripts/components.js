@@ -6,7 +6,6 @@ const projectsList = {
         `Demonstrates basic programming skills in Python. Utilitizes the libraries Requests, NumPy and BeautifulSoup to collect data and output to usable formats.`,
         `https://github.com/garatico/Metacritic-Scraper`]
 }
-
 // Class allows for reusable components of the navbars on all pages
 class GiovanniNavBar extends HTMLElement {
     // Constructor runs function to check page and pushes to custom component
@@ -22,7 +21,9 @@ class GiovanniNavBar extends HTMLElement {
         let project = "./views/projects.html";
         let about = "./views/about.html";
         let subPageCheck = this.checkPage(attribute);
-        let navBarHTML = `<nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
+        let navBarHTML = `
+        <div class="nav-container"> 
+            <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse"
         aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -55,7 +56,8 @@ class GiovanniNavBar extends HTMLElement {
             </li>
         </ul>
     </div>
-                    </nav>`;
+                    </nav>
+                    </div>`;
         return navBarHTML;
     }
 
@@ -68,7 +70,6 @@ class GiovanniNavBar extends HTMLElement {
         }
     }
 }
-
 class GiovanniProject extends HTMLElement {
     constructor() {
         super();
@@ -101,7 +102,6 @@ class GiovanniProject extends HTMLElement {
 
     }
 }
-
 class GiovanniFooter extends HTMLElement {
     constructor() {
         super();
@@ -141,6 +141,7 @@ class GiovanniFooter extends HTMLElement {
     </section>`;
     }
 }
+
 
 // Defines custom HTML Element
 window.customElements.define('giovanni-navbar', GiovanniNavBar);

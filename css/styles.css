@@ -5,11 +5,9 @@
      LAST UPDATED: 01-04-2022
 */
 
-/*
-    MEDIA QUERIES STYLING:
-
-    Hides spotify player under 576px
-    Hides twitter timeline under 576px
+/* MEDIA QUERIES STYLING: */
+/* Hides spotify player under 576px
+   Hides twitter timeline under 576px
 */
 @media (max-width: 576px) {
     #twitter-timeline {
@@ -20,9 +18,12 @@
     }
     #header {
         margin: 1vh;
+        
     }
     #header h1 {
-        font-size: 3rem;
+        font-size: 2vw;
+        justify-content: center;
+        align-items: center;
     }
 }
 @media (max-width: 768px) {
@@ -32,16 +33,18 @@
 }
 @media (min-width: 576px) {
     #header {
-        margin: 3vh;
+        margin: 1vh;
         align-items: center;
+        text-align: center;
+        
     }
     #header h1 {
         font-size: 4rem;
     }
     #headshot{
-       margin: 3vh;
-       width: 25vh;
-       height: 25vh;
+       margin: 2vh;
+       width: 20vh;
+       height: 20vh;
     }
 }
 
@@ -53,19 +56,23 @@ body {
 }
 
 .site-wrapper {
-    min-height: 100vh;
-    width: 95%;
+    max-height: 100vw;
+    width: 99%;
     height: 99%;
-    border-radius: 1%;
-    background-image: linear-gradient(rgba(50, 10, 70, 0.7), rgba(50, 10, 70, 0.7)), url(../img/background.jpg);
+    border-radius: 0.75%;
+    margin-top: clamp(0.5em, 1em, 2em);
+    margin-bottom: clamp(0.5em, 1em, 2em);
+    background-image: linear-gradient(rgba(50, 10, 70, 0.25), rgba(50, 10, 70, 0.75)), url(../img/background.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
 }
 
-/*  
-    NAVBAR RELATED STYLINGS
-*/
+/*  NAVBAR RELATED STYLINGS */
+.nav-container {
+    margin-left: 1vh;
+    margin-right: 1vh;
+}
 #navbar {
     display: flex;
     flex-direction: row;
@@ -90,35 +97,32 @@ nav {
 #navbar ul li a {
     font-family: 'Titillium Web', sans-serif;
     text-decoration: none;
-    font-size: clamp(1.5rem, 2vw, 4rem);
+    font-size: clamp(1.5rem, 1vw, 4rem);
     font-weight: 800;
     color: white;
 }
 
-/*
-    HEADING RELATED SYLING
-*/
+/* HEADING RELATED SYLING */
 #header {
-    display: flex;
+    /* display: flex; */
+    display:flex;
     background-image: linear-gradient(rgba(50, 10, 70, 0.3), rgba(50, 10, 70, 0.7));
     border-radius: 2%;
+    justify-content:center;
 }
 #header h1 {
     font-family: 'Titillium Web', sans-serif;
     font-weight: 800;
     color: white;
     text-align: center;
-    margin-left: 3vh;
+    font-size: clamp(2rem, 3vw, 6rem);
 }
 #headshot {
     border-radius: 50%;
     border: 0.5em solid purple;
 }
 
-/*
-    CONTENT RELATED STYLINGS
-*/
-
+/* CONTENT RELATED STYLINGS */
 .content {
     display: flex;
     flex-direction: row;
@@ -135,9 +139,7 @@ nav {
     color: white;
 }
 
-/*
-    SOCIAL LINKS STYLING
-*/
+/* SOCIAL LINKS STYLING */
 
 #social-links {
     display: flex;
@@ -160,9 +162,7 @@ nav {
     width: 480px;
 }
 
-/*
-    INDEX PAGE SPECIFIC STYLING
-*/
+/* INDEX PAGE SPECIFIC STYLING */
 
 #giovanni_desc li{
     font-size: clamp(2rem, 3vw, 6rem);
@@ -176,24 +176,25 @@ nav {
 #twitter-timeline {
     margin-right: 5vw;
 }
-/* 
-    MUSIC PAGE SPECIFIC STYLING
-*/
+/* MUSIC PAGE SPECIFIC STYLING */
+ul li#album_info {
+    list-style: none;
+}
 
 li#album_info div p{
-    font-size: clamp(2rem, 3vw, 6rem);
+    display: block;
+    font-size: clamp(0.5vw, 2vw, 5vw);
     font-weight: 500;
     color: white;
 }
 
 #bs_album a img{
-    width: clamp(10vw, 60vw, 70vw);
-    height: clamp(10vw, 60vw, 70vw);
+    display: block;
+    width: clamp(10vw, 300px, 70vw);
+    height: clamp(10vw, 300px, 70vw);
 }
 
-/*
-    PORTFOLIO / PROJECTS PAGE SPECIFIC STYLING
-*/
+/* PORTFOLIO / PROJECTS PAGE SPECIFIC STYLING */
 #projects_list ul {
     display: flex;
     flex-wrap: wrap;

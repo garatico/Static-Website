@@ -130,8 +130,7 @@ nav {
     margin: 1em;
     padding: 1em;
 }
-
-#info {
+.info {
     font-family: 'Titillium Web', sans-serif;
     text-decoration: none;
     font-size: clamp(1.5rem, 2vw, 4rem);
@@ -163,9 +162,18 @@ nav {
 }
 
 /* INDEX PAGE SPECIFIC STYLING */
-
+#info_index {
+    text-decoration: none;
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    font-weight: 800;
+    color: white;
+}
+ul#giovanni_desc {
+    margin-left: -1vw;
+    display: block;
+}
 #giovanni_desc li{
-    font-size: clamp(2rem, 3vw, 6rem);
+    font-size: clamp(1rem, 2.5vw, 6rem);
     font-weight: 800;
     font-style: italic;
     margin-left: 5vh;
@@ -195,23 +203,33 @@ li#album_info div p{
 }
 
 /* PORTFOLIO / PROJECTS PAGE SPECIFIC STYLING */
+#info_projects {
+    text-decoration: none;
+    font-size: clamp(1.5rem, 2vw, 4rem);
+    font-weight: 800;
+    color: white;
+    width: clamp(10vw, 15vw, 20vw);
+}
+#project {
+    width: clamp(10vw, 40vw, 80vw);
+}
+#projects_list {
+    width: clamp(10vw, 40vw, 80vw);
+}
 #projects_list ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
+    flex-direction: column;
 }
 #projects_list ul li#project_title {
     color: white;
-    font-size: clamp(1rem, 3vw, 5rem);
+    font-size: clamp(1rem, 2vw, 5rem);
 }
 #projects_list ul li#project_desc {
     color: white;
-    font-size: clamp(1rem, 2vw, 3rem);
+    font-size: clamp(1rem, 1vw, 3rem);
 }
-#port_link a {
-    font-size: clamp(1rem, 3vw, 3rem);
-}
-
 
 testy-component {
     color: white;

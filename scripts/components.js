@@ -82,17 +82,14 @@ class GiovanniProject extends HTMLElement {
             console.log(project)
             let projectHTML =
                 `<ul id="project">  
-            <li id="project_title">
-                <strong><i> - ${projectsList[project][0]}</i></strong>
-            </li>
+                    <li id="project_title">
+                        <a href="${projectsList[project][2]}">
+                            <strong><i>${projectsList[project][0]}</i></strong>
+                        </a>
+                    </li>
             <li id="project_desc">
                 ${projectsList[project][1]}
             </li>
-            <div id="port_link">
-                <a href="${projectsList[project][2]}">
-                    Link to Project
-                </a>
-            </div>
         </ul>`
             return projectHTML;
         } else {

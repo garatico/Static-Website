@@ -48,19 +48,51 @@
 
         <!-- Contains content of the page -->
         <div class="content">
-            <div class="info" id="info_projects">
-                <p>
-                    Portfolio Projects linked through GitHub
-                </p>
+
+
+            <!-- mt-3 = MARGIN TOP = 2-->
+            <!-- ms-3 = MARGIN START (LEFT) = 2-->
+            <div class="container mt-2 ms-2">
+                <div class="info" id="info_projects">
+                    <h2> Portfolio Projects linked through GitHub: </h2>
+                </div>
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <!-- PROJECT 2 / METACRITIC-->
+                    <!-- w-30 = WIDTH = 30; -->
+                    <div class="col-lg-4 w-30 h-100">
+                        <!-- m-b-3 = MARGIN BOTTOM = 3 -->
+                        <div class="card border-primary border-5 m-b-3" style="width: 25rem;">
+                            <img src="../img/meta.png" alt="Metacritic" class="card-img-top" id="metapic">
+                            <div class="card-body">
+                                <h3 class="card-title">Metacritic Webscraper</h3>
+                                <p class="card-text">Demonstrates basic programming skills in Python. Utilitizes the libraries Requests, NumPy and BeautifulSoup to collect data and output to usable formats.</p>
+                                <a href="https://github.com/garatico/Metacritic-Scraper" class="btn btn-primary"> Link to Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- PROJECT 1-->
+                    <div class="col-lg-4 w-30 h-100">
+                        <!-- m-b-3 = MARGIN BOTTOM = 3 -->
+                        <div class="card border-primary border-5 m-b-3" style="width: 25rem;">
+                            <img src="../img/face.jpg" alt="Giovanni" class="card-img-top" id="facepic">
+                            <div class="card-body">
+                                <h3 class="card-title">Personal Website</h3>
+                                <p class="card-text">Demonstrates basic web development skills including HTML and CSS. Utilitizes Bootstrap styling and demonstrates knowledge of git version control.</p>
+                                <a href="https://github.com/garatico/garatico.github.io" class="btn btn-primary"> Link to Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div id="projects_list">
+            <!-- <div id="projects_list">
                 <giovanni-project project="next-project">
                 </giovanni-project>
                 <giovanni-project project="Metacritic-Scraper">
                 </giovanni-project>
                 <giovanni-project project="Personal-Website">
                 </giovanni-project>
-            </div>
+            </div> -->
+            
         </div>
 
         <!-- Footer section contains social links -->

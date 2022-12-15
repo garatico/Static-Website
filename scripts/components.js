@@ -49,60 +49,41 @@ class GiovanniFooter extends HTMLElement {
     }
 }
 
-
-// Class allows for reusable components of the navbars on all pages
 class GiovanniNavBar extends HTMLElement {
-    // Constructor runs function to check page and pushes to custom component
     constructor() {
         super();
         let whichNavBar = this.navBuilder(this.getAttribute('page'));
-        this.innerHTML = whichNavBar;
+        this.append(whichNavBar);
         console.log("CONSTRUCTION COMPLETE");
     }
-    // Method builds custom Bootstrap NavBar depending on which page the user is on
     navBuilder(attribute) {
         let [indexPage, music, project, about] = ["./index.html", "./views/music.html", "./views/projects.html", "./views/about.html"];
         let subPageCheck = this.checkPage(attribute);
-        let navBarHTML = `
-        <div class="nav-container"> 
-            <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navCollapse" aria-controls="navCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            <div class="collapse navbar-collapse" id="navCollapse">
-                <ul class="nav navbar-nav">
-                    <li class="nav-item">
-                        <!-- Returns user to home page -->
-                        <a class="nav-link" href=${subPageCheck + indexPage}>
-                            HOME
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- Takes user to projects page -->
-                        <a class="nav-link" href=${subPageCheck + project}>
-                            PROJECTS
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <!-- Takes user to music page -->
-                        <a class="nav-link" href=${subPageCheck + music}>
-                            MUSIC
-                        </a>
-                    </li>
-            
-                    <li class="nav-item">
-                        <!-- Takes user to about page -->
-                        <a class="nav-link" href=${subPageCheck + about}>
-                            ABOUT
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>`;
-        return navBarHTML;
+        let div = document.createElement('div');
+        let nav = document.createElement('nav');
+        let toggle = document.createElement('button')
+        div.setAttribute('class', 'nav-container')
+        this.setAttributes(nav, {'class':'navbar navbar-expand-lg navbar-dark', 'id':'navbar'})
+        this.setAttributes(toggle, {'class':'navbar-toggler','type':'button', 'data-bs-toggle': 'collapse', 'data-bs-target':'#navCollapse', 'aria-controls':'navCollapse', 'aria-expanded':'false','aria-label':'Toggle navigation'})
+        toggle.innerHTML = `<span class="navbar-toggler-icon"></span>`
+        let navCollapse = document.createElement('div')
+        navCollapse.setAttribute('class', 'collapse navbar-collapse')
+        navCollapse.setAttribute('id', 'navCollapse')
+        let ul = document.createElement('ul')
+        ul.setAttribute('class', 'nav navbar-nav')
+        // Creates NavBar Items
+        let homeLi = this.navButton(`${subPageCheck + indexPage}`, 'HOME')
+        let projectLi = this.navButton(`${subPageCheck + project}`, 'PROJECTS')
+        let musicLi = this.navButton(`${subPageCheck + music}`, 'MUSIC')
+        let aboutLi = this.navButton(`${subPageCheck + about}`, 'ABOUT')
+        // Appends items together
+        ul.append(homeLi, projectLi, musicLi, aboutLi)
+        navCollapse.appendChild(ul)
+        nav.append(toggle, navCollapse)
+        div.appendChild(nav)
+        // Returns final navbar object
+        return div
     }
-
     // Method checks which page of the website is shown
     checkPage(attribute) {
         if (attribute == 'music' || attribute == 'about' || attribute == 'projects') {
@@ -111,7 +92,24 @@ class GiovanniNavBar extends HTMLElement {
             return "";
         }
     }
+    // Navbar Button 
+    navButton(link, text) {
+        let li = document.createElement('li')
+        li.setAttribute('class', 'nav-item')
+        let ahref = document.createElement('a')
+        ahref.setAttribute('class', 'nav-link')
+        ahref.setAttribute('href', `${link}`)
+        ahref.innerText = text
+        li.appendChild(ahref)
+        return li
+    }
+    setAttributes(element, attributes) {
+        for(var key in attributes) {
+          element.setAttribute(key, attributes[key]);
+        }
+      }
 }
+
 class GiovanniProject extends HTMLElement {
     constructor() {
         super();
@@ -138,15 +136,10 @@ class GiovanniProject extends HTMLElement {
             console.log("NO SUCH PROJECT")
             return "<p></p>";
         }
-
     }
 }
-
-
 
 // Defines custom HTML Element
 window.customElements.define('giovanni-navbar', GiovanniNavBar);
 window.customElements.define('giovanni-project', GiovanniProject);
 window.customElements.define('giovanni-footer', GiovanniFooter);
-
-
